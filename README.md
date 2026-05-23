@@ -26,6 +26,22 @@ Every single algorithm in AlgoAtlas follows a strict, beautifully organized **2x
 
 ---
 
+## 🚀 Live Deployment
+**Experience the platform instantly without any installation:**  
+🔗 **[AlgoAtlas Live Demo](https://algo-atlas-aiml-algorithm-visualizer-6ophucfzr.vercel.app)**  
+*(Hosted on a Vercel Serverless Edge network. Please allow 5-10 seconds for the Python backend to "wake up" on your very first click!)*
+
+---
+
+## ✨ Core Engineering Features
+
+*   **100% Pure NumPy Deep Learning:** To achieve blazing fast, serverless deployment without crashing cloud memory limits, complex engines (like the **Nano-GPT Transformer**, **CartPole DQN**, **Autoencoders**, and **CNN Feature Extractors**) were built entirely from scratch using pure Matrix Mathematics (NumPy), completely bypassing heavy libraries like TensorFlow or PyTorch.
+*   **High-FPS Physics via HTML5 Canvas:** Reinforcement Learning and Drawing Pad environments bypass the React Virtual DOM to paint directly to the screen via HTML5 Canvas, ensuring 60-FPS buttery-smooth rendering.
+*   **Live Recharts Analytics:** Dynamic visualization of Training vs. Validation Loss, Coefficient Shrinkage, Epsilon Decay, and Self-Attention Matrices.
+*   **Headless Matplotlib Rendering:** Heavy decision boundary calculations (e.g., SVM, GMM) are offloaded to the Flask backend using non-interactive `Agg` rendering, delivering highly compressed Base64 strings to keep the network payload under 50KB.
+
+---
+
 ## 🚀 The Algorithms (What you can play with!)
 
 AlgoAtlas features **over 20 of the most powerful algorithms in the world**, divided into 6 easy-to-understand categories.
@@ -105,17 +121,23 @@ Don't worry if you aren't a programmer. Follow these steps exactly, and you will
 3.  **Git** - [Download Here](https://git-scm.com/downloads)
 4.  *Optional but recommended:* A code editor like **Visual Studio Code (VSCode)**.
 
+---
+
+## 💻 How to Run Locally
+
+Because the platform is deployed live on Vercel, **you do not need to run this locally.** However, if you wish to run it for development or modification, follow these steps:
+
 ### Step 1: Download the Code
 Open your computer's Terminal (Command Prompt on Windows, Terminal on Mac) and run:
 ```bash
-git clone https://github.com/YourUsername/AlgoAtlas.git
-cd AlgoAtlas
+git clone [https://github.com/Sriram-B-Srivatsa/AlgoAtlas__AIML_Algorithm_Visualizer.git]
+cd AlgoAtlas__AIML_Algorithm_Visualizer
 ```
 
 ### Step 2: Start the Brain (The Python Backend)
 We need to start the server that does all the math. In your terminal, type:
 ```bash
-cd backend
+cd api
 ```
 
 Now, create a "Virtual Environment". This is like a safe, isolated room on your computer just for this project's Python files:
@@ -137,7 +159,7 @@ pip install -r requirements.txt
 
 Finally, turn the brain on!
 ```bash
-python app.py
+flask --app index run --port 5000
 ```
 *(Leave this terminal window open!).*
 
@@ -168,8 +190,8 @@ If you want to look at the code, here is how everything is beautifully organized
 
 ```text
 AlgoAtlas/
-├── backend/
-│   ├── app.py                 # The central nervous system (Routes API calls)
+├── api/
+│   ├── index.py               # The central nervous system (Routes API calls)
 │   ├── requirements.txt       # List of all Libs and Packages
 |   ├── datasets/              # Where sample data is generated
 │   └── models/                # Where the math happens
@@ -179,17 +201,16 @@ AlgoAtlas/
 │       ├── semi/              # PseudoLabeling.py, Contrastive.py
 │       ├── supervised/        # DTrees.py, Reg.py, SVM.py...
 │       └── unsupervised/      # kmeans.py, PCA.py, Apriori.py...
-└── frontend/
-    └── public/
-    └── src/
-        ├── api.jsx            # How the frontend talks to the backend
-        ├── App.jsx            # Main Container of UI
-        ├── index.css          # Styling Entry Point
-        ├── index.jsx          # Frontend Entry Point
-        ├── data/              # Contains the text for this Documentation!
-        ├── components/        # Reusable UI (Navbar, Footer)
-        ├── layouts/           # Layout Design
-        └── pages/             # The visualizers! Matches backend folders 1-to-1.
+└── public/
+└── src/
+    ├── api.jsx            # How the frontend talks to the backend
+    ├── App.jsx            # Main Container of UI
+    ├── index.css          # Styling Entry Point
+    ├── index.jsx          # Frontend Entry Point
+    ├── data/              # Contains the text for this Documentation!
+    ├── components/        # Reusable UI (Navbar, Footer)
+    ├── layouts/           # Layout Design
+    └── pages/             # The visualizers! Matches backend folders 1-to-1.
 ```
 
 ---
