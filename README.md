@@ -168,7 +168,7 @@ Open a **brand new** terminal window (leave the Python one running in the backgr
 
 Navigate to the frontend folder:
 ```bash
-cd AlgoAtlas/frontend
+cd .
 ```
 
 Install the website building blocks:
@@ -189,7 +189,7 @@ Your browser will automatically open to `http://localhost:3000`. **You are now r
 If you want to look at the code, here is how everything is beautifully organized:
 
 ```text
-AlgoAtlas/
+AlgoAtlas__AIML_Algorithm_Visualizer/
 ├── api/
 │   ├── index.py               # The central nervous system (Routes API calls)
 │   ├── requirements.txt       # List of all Libs and Packages
