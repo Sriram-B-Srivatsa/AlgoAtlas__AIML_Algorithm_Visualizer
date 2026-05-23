@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+.homepage {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 3rem 2rem;
+  padding-bottom: 15vh;
+  font-family: 'Inter', sans-serif;
+  color: #1e293b;
+}
+
+.hero-section {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.homepage-title {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: #0f172a;
+  letter-spacing: -0.02em;
+}
+
+.homepage-subtitle {
+  font-size: 1.2rem;
+  color: #64748b;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* Back Button for Sub-Categories */
+.back-to-categories {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: none;
+  border: none;
+  color: #3b82f6;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  margin-bottom: 2rem;
+  padding: 0.5rem 0;
+  transition: opacity 0.2s;
+}
+
+.back-to-categories:hover {
+  opacity: 0.7;
+}
+
+/* Dynamic Grid */
+.model-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+
+/* The Cards */
+.model-card {
+  background: white;
+  border-radius: 12px;
+  padding: 1.5rem;
+  border: 1px solid #e2e8f0;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.02);
+}
+
+.model-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.08);
+  border-color: #cbd5e1;
+}
+
+.model-card.disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  filter: grayscale(100%);
+}
+
+.model-card.disabled:hover {
+  transform: none;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.02);
+  border-color: #e2e8f0;
+}
+
+/* Card Internals */
+.card-icon-wrapper {
+  width: 48px;
+  height: 48px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+  color: white;
+}
+
+.model-name {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: #0f172a;
+}
+
+.model-description {
+  font-size: 0.95rem;
+  color: #64748b;
+  line-height: 1.5;
+  flex-grow: 1;
+  margin-bottom: 1.5rem;
+}
+
+.card-cta {
+  font-size: 0.9rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.card-cta span {
+  color: #3b82f6;
+}
+
+.coming-soon {
+  color: #94a3b8 !important;
+  font-weight: 500;
+}
+
+/* Category Specific Colors */
+.cat-supervised { background: linear-gradient(135deg, #3b82f6, #2563eb); }
+.cat-unsupervised { background: linear-gradient(135deg, #10b981, #059669); }
+.cat-ensemble { background: linear-gradient(135deg, #8b5cf6, #7c3aed); }
+.cat-dl { background: linear-gradient(135deg, #f59e0b, #d97706); }
+.cat-rl { background: linear-gradient(135deg, #ef4444, #dc2626); }
+.cat-semi { background: linear-gradient(135deg, #ec4899, #db2777); }
